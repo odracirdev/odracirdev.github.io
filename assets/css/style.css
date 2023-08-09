@@ -18,9 +18,8 @@ h1, h2, h3, h4, h5, h6, span {
 header .container  {
     display: flex;
     justify-content: flex-end;
-    font-size: 1.4rem;
-    width: 95%;
-    padding-top: 16px;
+    width: 100%;
+    padding: 16px;
 }
 .nav-container ul {
     list-style: none;
@@ -41,8 +40,8 @@ main .container {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 100vw;
-    height: 60vh;
+    width: 100%;
+    height: 80vh;
     font-size: 3.2rem;
 }
 span {
@@ -61,6 +60,7 @@ main .container .odracir h6 {
 main .container .experience {
     font-size: 2.4rem;
     padding-top: 80px;
+    text-align: center;
 }
 main .container .experience span {
     font-family: 'Victor Mono', monospace;
