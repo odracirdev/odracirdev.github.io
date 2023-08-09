@@ -9,7 +9,6 @@ html {
     background-color: #010409;
     color: #e7edf3;
 }
-
 h1, h2, h3, h4, h5, h6, span {
     font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
 }
@@ -23,16 +22,13 @@ header .container  {
     width: 95%;
     padding-top: 16px;
 }
-
 .nav-container ul {
     list-style: none;
     padding: 0;
 }
-
 .nav-container li {
     display: inline;
 }
-
 .nav-container li a {
     text-decoration: none;
     color: #e7edf3;
