@@ -11,8 +11,14 @@
 html {
     font-size: 62.5%;
     font-family: 'Victor Mono', monospace;
-    background-color: var(--dark-primary);
     color: var(--light-primary);
+}
+body {
+    background-color: var(--dark-primary);
+    background-image:radial-gradient(var(--dark-primary), 1%, transparent 1%), radial-gradient(var(--light-primary), 0.1%, transparent 20%);
+    background-size: 16px 16px;
+    background-position: 0 0, 30px 30px;
+    background-repeat: repeat;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
