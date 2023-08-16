@@ -3,6 +3,47 @@
     --light-primary: #e7edf3;
     --blue-primary: #497ff4;
 }
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: bold;
+    font-weight: 700;
+    src: 
+    local("Comfortaa"),
+    url("../fonts/Comfortaa.woff2") format("woff2");
+}
+@font-face {
+    font-family: 'VictorMono-Regular';
+    font-style: normal;
+    font-weight: 400;
+    src: 
+    local("VictorMono-Regular"),
+    url("../fonts/VictorMono-Regular.woff2") format("woff2");
+}
+@font-face {
+    font-family: 'VictorMono-Italic';
+    font-style: normal;
+    font-weight: 400;
+    src: 
+    local("VictorMono-Italic"),
+    url("../fonts/VictorMono-Italic.woff2") format("woff2");
+}
+@font-face {
+    font-family: 'VictorMono-Bold';
+    font-style: bold;
+    font-weight: 700;
+    src: 
+    local("VictorMono-Bold"),
+    url("../fonts/VictorMono-Bold.woff2") format("woff2");
+}
+@font-face {
+    font-family: 'VictorMono-BoldItalic';
+    font-style: bold;
+    font-weight: 700;
+    src: 
+    local("VictorMono-BoldItalic"),
+    url("../fonts/VictorMono-BoldItalic.woff2") format("woff2");
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -10,8 +51,8 @@
 }
 html {
     font-size: 62.5%;
-    font-family: 'Victor Mono', monospace;
     color: var(--light-primary);
+    font-family: 'VictorMono-Regular', monospace;
 }
 body {
     background-color: var(--dark-primary);
