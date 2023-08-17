@@ -3,6 +3,11 @@
     --light-primary: #e7edf3;
     --blue-primary: #497ff4;
 }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 @font-face {
     font-family: 'Comfortaa';
     font-style: bold;
@@ -43,17 +48,12 @@
     local("VictorMono-BoldItalic"),
     url("../fonts/VictorMono-BoldItalic.woff2") format("woff2");
 }
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 html {
     font-size: 62.5%;
     color: var(--light-primary);
     font-family: 'VictorMono-Regular', monospace;
 }
+
 body {
     background-color: var(--dark-primary);
     background-image:radial-gradient(var(--dark-primary), 1%, transparent 1%), radial-gradient(var(--light-primary), 0.1%, transparent 20%);
@@ -63,6 +63,34 @@ body {
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
+}
+h1 {
+    font-size: 5rem;
+    line-height: 5.5rem;
+}
+h2 {
+    font-size: 2.5rem;
+    line-height: 2.8rem;
+}
+h3 {
+    font-size: 1.8rem;
+    line-height: 2rem;
+}
+h4 {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+}
+h5 {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+}
+h6 {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+}
+p {
+    font-size: 1.4rem;
+    line-height: 2rem;
 }
 span {
     color: var(--blue-primary);
@@ -86,59 +114,118 @@ header .container  {
 }
 .nav-container li a {
     text-decoration: none;
-    color: var(--light-primary);
 }
 
 /* Main */
 
-main .container {
+/* About */
+
+main .container-about {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100%;
     min-width: 320px;
-    height: 80vh;
+    margin-top: 60px;
 }
-main .container .odracir {
+main .container-about .odracir {
     display: flex;
     flex-direction: column;
     width: 90%;
     margin: 0 auto;
     text-align: center;
 }
-.odracir h1 {
-    font-size: 5rem;
-}
 .odracir span {
     font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
 }
 .odracir h2 {
     margin-top: 8px;
-    font-size: 2.5rem;
 }
 .odracir h3 {
-    font-size: 1.8rem;
     color: var(--blue-primary);
 }
-main .container .experience {
+main .container-about .experience {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
     width: 90%;
     margin-top: 40px;
-    font-size: 1.6rem;
-    line-height: 1.8rem;
-    text-align: center;
+    margin-bottom: 40px;
 }
-main .container .experience p {
-    margin-top: 8px;
+main .container-about .experience hr {
+    margin-top: 40px;
+    height: 2px;
+    background-color: var(--blue-primary);
+    border: none;
+    width: 60%;
+}
+
+/* Projects */
+
+main .container-projects {
+    display: grid;
+    place-content: center;
+    min-width: 320px;
+    max-width: 360px;
+    margin-top: 40px;
+    width: 90%;
+    margin: 0 auto;
+}
+.container-projects h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.container-cards {
+    display: grid;
+    gap: 20px;
+}
+.project-card {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .4);
+    width: 90%;
+    aspect-ratio: 18/9;
+    border-radius: 8px;
+    border: 2px var(--blue-primary) solid;
+    position: relative;
+    margin: 0 auto;
+}
+.project-card__bg {
+    background: #010409c2;
+    position: absolute;
+    inset: 0;
+    filter: blur(20px);
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+}
+.project-image img {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+.project-desc {
+    padding: 20px;
+}
+.project-desc h3 {
+    color: var(--blue-primary);
+    text-decoration: underline;
+    font-size: 2.5rem;
+    line-height: 2.8rem;
+}
+.project-desc p {
+    padding-top: 12px;
 }
 
 /* Footer */
 
 footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 32px;
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-    font-size: 1.4rem;
+    height: 60px;
+    margin-top: 40px;
 }
