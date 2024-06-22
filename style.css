@@ -116,11 +116,13 @@ main {
         font-family: 'Kode Mono', monospace;
         font-size: 18px;
         color: var(--blue-primary);
+        user-select: none;
       }
 
       & p {
         text-wrap: balance;
         margin-bottom: 0;
+        user-select: none;
       }
 
       & img {
