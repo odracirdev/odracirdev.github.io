@@ -1,4 +1,0 @@
-.container-cards {
-    display: grid;
-    grid-template-columns: repeat(2, 300px);
-}

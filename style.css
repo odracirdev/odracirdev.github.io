@@ -1,0 +1,133 @@
+:root {
+    --dark-primary: #010409;
+    --light-primary: #e7edf3;
+    --blue-primary: #497ff4;
+
+    --h1-size: 48px;
+    --h2-size: 28px;
+    --h3-size: 32px;
+    --p-size: 16px;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* nunito-latin-400-normal */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/nunito@latest/latin-400-normal.woff2) format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+/* kode-mono-latin-400-normal */
+@font-face {
+  font-family: 'Kode Mono';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/kode-mono@latest/latin-400-normal.woff2) format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+html {
+  background-color: var(--dark-primary);
+  color: var(--light-primary);
+  font-family: 'Nunito', sans-serif;
+  font-size: var(--p-size);
+}
+
+h1, h2, h3 {
+  font-family: 'Kode Mono', monospace;
+  margin-bottom: 28px;
+}
+
+h1 {
+  color: var(--blue-primary);
+  font-size: var(--h1-size);
+}
+
+h2 {
+  font-size: var(--h2-size);
+}
+
+h3 {
+  font-size: var(--h3-size);
+}
+
+p {
+  margin-bottom: 28px;
+}
+
+main {
+  width: 760px;
+  padding-top: 80px;
+  margin: 0 auto;
+
+  & .desc {
+    opacity: 80%;
+    max-width: 65%;
+  }
+
+  & .rrss {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 36px;
+
+    & .rrss__list {
+
+      & a{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        color: white;
+        transition: color 0.3s ease-in-out;
+        
+        &:hover {
+          color: var(--blue-primary);
+        }
+      }
+
+    }
+  }
+  & .cards__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+
+    & .card__project {
+      border: 1px var(--light-primary) solid;
+      border-radius: 8px;
+      padding: 16px;
+
+      & > * + * {
+        margin-top: 8px;
+      }
+
+      & h4 {
+        font-family: 'Kode Mono', monospace;
+        font-size: 18px;
+        color: var(--blue-primary);
+      }
+
+      & p {
+        margin-bottom: 0;
+      }
+
+      & img {
+        height: 200px;
+        width: 100%;
+        background-color: var(--light-primary);
+        border: inherit;
+        border-radius: 8px;
+      }
+    }
+  }
+}
