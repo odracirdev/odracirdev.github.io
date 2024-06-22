@@ -106,6 +106,7 @@ main {
       border: 1px var(--light-primary) solid;
       border-radius: 8px;
       padding: 16px;
+      width: 340px;
 
       & > * + * {
         margin-top: 8px;
@@ -118,6 +119,7 @@ main {
       }
 
       & p {
+        text-wrap: balance;
         margin-bottom: 0;
       }
 
