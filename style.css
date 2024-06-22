@@ -150,19 +150,21 @@ main {
 @media (width <= 400px) {
   main {
     max-width: 85%;
-    padding-top: 40px;
-    margin: 0 auto;      
+    padding: 40px 0;
+    margin: 0 auto;
+    
+    & header {
+      & h1 {
+        font-size: var(--h1-size-m);
+      }
+  
+      & h2 {
+        font-size: var(--h2-size-m);
+      }
 
-    & h1 {
-      font-size: var(--h1-size-m);
-    }
-
-    & h2 {
-      font-size: var(--h2-size-m);
-    }
-
-    & .desc {
-      max-width: 100%;
+      & .desc {
+        max-width: 100%;
+      }
     }
 
     & .cards__container {
