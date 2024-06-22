@@ -114,7 +114,7 @@ main {
     gap: 24px;
 
     & .card__project {
-      border: 1px var(--light-primary) solid;
+      border: 1px rgb(from var(--light-primary) r g b / 0.1) solid;
       border-radius: 8px;
       padding: 16px;
 
