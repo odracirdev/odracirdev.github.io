@@ -4,23 +4,23 @@ const descChars = ["1 J C ' M > { 1 z 8 U M ( j ? X q 5 A ) / Y U W > Y ! 9 1 s 
 const rotatingHeader = document.querySelectorAll(".rotatingHeader");
 const rotatingDesc = document.querySelectorAll(".rotatingDesc");
 
-let index = 0;
+let indexA = 0, indexB = 0;
 const velocity = 100; // Time in milliseconds
 
 function rotateHeader() {
   rotatingHeader.forEach((text) => {
-    text.textContent = headerChars[index];
+    text.textContent = headerChars[indexA];
   });
-  index = (index + 1) % headerChars.length;
+  indexA = (indexA + 1) % headerChars.length;
 }
 
 setInterval(rotateHeader, velocity);
 
 function rotateDesc() {
   rotatingDesc.forEach((text) => {
-    text.textContent = descChars[index];
+    text.textContent = descChars[indexB];
   });
-  index = (index + 1) % descChars.length;
+  indexB = (indexB + 1) % descChars.length;
 }
 
 setInterval(rotateDesc, velocity);
