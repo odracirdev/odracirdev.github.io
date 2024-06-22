@@ -7,14 +7,20 @@ const rotatingDesc = document.querySelectorAll(".rotatingDesc");
 let index = 0;
 const velocity = 100; // Time in milliseconds
 
-function rotateString() {
+function rotateHeader() {
   rotatingHeader.forEach((text) => {
     text.textContent = headerChars[index];
-  });
-  rotatingDesc.forEach((text) => {
-    text.textContent = descChars[index];
   });
   index = (index + 1) % headerChars.length;
 }
 
-setInterval(rotateString, velocity);
+setInterval(rotateHeader, velocity);
+
+function rotateDesc() {
+  rotatingDesc.forEach((text) => {
+    text.textContent = descChars[index];
+  });
+  index = (index + 1) % descChars.length;
+}
+
+setInterval(rotateDesc, velocity);
