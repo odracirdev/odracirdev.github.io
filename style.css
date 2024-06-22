@@ -11,6 +11,8 @@
     --h1-size-m: 40px;
     --h2-size-m: 20px;
     --h3-size-m: 24px;
+
+    --sb-size: 8px;
 }
 * {
     box-sizing: border-box;
@@ -43,6 +45,31 @@ html {
   color: var(--light-primary);
   font-family: 'Nunito', sans-serif;
   font-size: var(--p-size);
+}
+
+
+body {
+  scrollbar-gutter: stable both-edges;
+
+  &::-webkit-scrollbar {
+    width: var(--sb-size);
+    height: var(--sb-size);
+  }
+  &::-webkit-scrollbar-track {
+    background: var(--dark-primary);
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--blue-primary);
+    border-radius: 4px;
+  }
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--blue-primary)
+                     var(--dark-primary);
+  }
 }
 
 h1, h2, h3 {
