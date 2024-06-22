@@ -68,7 +68,7 @@ p {
 }
 
 main {
-  width: 760px;
+  width: 690px;
   padding-top: 80px;
   margin: 0 auto;
 
@@ -110,14 +110,13 @@ main {
 
   & .cards__container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2,minmax(0,1fr));
     gap: 24px;
 
     & .card__project {
       border: 1px var(--light-primary) solid;
       border-radius: 8px;
       padding: 16px;
-      width: 340px;
 
       & > * + * {
         margin-top: 8px;
@@ -131,7 +130,7 @@ main {
       }
 
       & p {
-        text-wrap: balance;
+        opacity: 60%;
         margin-bottom: 0;
         user-select: none;
       }
@@ -148,6 +147,10 @@ main {
 }
 
 @media (width <= 400px) {
+  h1, h2, h3{
+    margin-bottom: 18px;
+  }
+  
   main {
     max-width: 85%;
     padding: 40px 0;
