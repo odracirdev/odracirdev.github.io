@@ -1,4 +1,3 @@
-// @ts-check
 import { defineConfig } from 'astro/config'
 import { URL } from './src/data/constants'
 

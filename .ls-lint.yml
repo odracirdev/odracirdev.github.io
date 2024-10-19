@@ -49,3 +49,4 @@ ignore:
    - .ls-lint.yml
    - astro.config.mjs
    - commitlint.config.js
+   - dist
