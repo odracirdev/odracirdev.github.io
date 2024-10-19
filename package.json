@@ -1,7 +1,7 @@
 {
-  "name": "",
+  "name": "odraciRdev",
   "version": "1.0.0",
-  "description": "Boilerplate que incluye integraciones y configuraciones enfocadas en buenas prácticas para construir sitios rápidos, accesibles y listos para producción.",
+  "description": "Portafolios.",
   "keywords": [
     "astro",
     "astrojs",
@@ -91,9 +91,5 @@
     "prettier-plugin-astro": "0.14.1",
     "prettier-plugin-tailwindcss": "0.6.8",
     "simple-git-hooks": "2.11.1"
-  },
-  "engines": {
-    "node": ">=18.20.0",
-    "pnpm": ">=9.12.0"
   }
 }
