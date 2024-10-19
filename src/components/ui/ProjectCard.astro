@@ -1,0 +1,38 @@
+<div class="card__project">
+  <img src="https://placehold.co/340x200.png" alt="" />
+  <h4><span class="rotatingHeader"></span></h4>
+  <p><span class="rotatingDesc"></span></p>
+</div>
+
+<style>
+  .card__project {
+    border: 1px rgb(from var(--light) r g b / 0.1) solid;
+    border-radius: 8px;
+    padding: 16px;
+
+    & > * + * {
+      margin-top: 8px;
+    }
+
+    & h4 {
+      font-family: 'Kode Mono', monospace;
+      font-size: 18px;
+      color: var(--blue);
+      user-select: none;
+    }
+
+    & p {
+      opacity: 60%;
+      margin-bottom: 0;
+      user-select: none;
+    }
+
+    & img {
+      height: 200px;
+      width: 100%;
+      background-color: var(--light);
+      border: inherit;
+      border-radius: 8px;
+    }
+  }
+</style>
