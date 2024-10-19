@@ -1,12 +1,14 @@
 ---
 import Footer from '@ui/Footer.astro'
 import { Schema } from 'astro-seo-schema'
-import Favicons from '@components/Favicons.astro'
-import 'sanitize.css'
+// import Favicons from '@components/Favicons.astro'
 import 'sanitize.css/forms.css'
 import 'sanitize.css/assets.css'
-import 'sanitize.css/typography.css'
 import 'sanitize.css/reduce-motion.css'
+// Supports weights 400-700
+import '@fontsource-variable/nunito'
+// Supports weights 400-700
+import '@fontsource-variable/kode-mono'
 
 interface Options {
   title: string
@@ -37,78 +39,86 @@ const { title, description, metaRobots } = options
     <!-- Critical CSS -->
     <style is:inline>
       :root {
-        --accent: 136, 58, 234;
-        --accent-light: 224, 204, 250;
-        --accent-dark: 49, 10, 101;
-        --accent-gradient: linear-gradient(
-          45deg,
-          rgb(var(--accent)),
-          rgb(var(--accent-light)) 30%,
-          white 60%
-        );
-        --scrollbar: #e5e5e5;
-        --scrollbar-thumb: #c0c0c0;
-        --scrollbar-thumb-hover: #909090;
-        --scrollbar-dark: #898989;
-        --scrollbar-thumb-dark: #5d5d5d;
-        --scrollbar-thumb-hover-dark: #3f3f3f;
+        --dark: #010409;
+        --light: #e7edf3;
+        --blue: #497ff4;
+
+        --h1-size: 48px;
+        --h2-size: 28px;
+        --h3-size: 32px;
+        --p-size: 16px;
+
+        --h1-size-m: 40px;
+        --h2-size-m: 20px;
+        --h3-size-m: 24px;
+
+        --sb-size: 8px;
       }
 
-      @view-transition {
-        navigation: auto;
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
       }
 
-      body::-webkit-scrollbar {
-        width: 7px;
-        height: 7px;
-        background: var(--scrollbar);
-        transition: background 150ms cubic-bezier(0.4, 0, 0.2, 1);
-        will-change: background;
+      html {
+        background-color: var(--dark);
+        color: var(--light);
+        font-family: 'Nunito Variable', sans-serif;
+        font-size: var(--p-size);
       }
 
-      body::-webkit-scrollbar-thumb {
-        background: var(--scrollbar-thumb);
-        border-radius: 0.25rem;
-      }
+      body {
+        scrollbar-gutter: stable both-edges;
 
-      @media (any-hover: hover) {
-        body::-webkit-scrollbar-thumb:hover {
-          background: var(--scrollbar-thumb-hover);
-        }
-      }
-
-      @media (prefers-color-scheme: dark) {
-        html body::-webkit-scrollbar {
-          background: var(--scrollbar-dark);
-          transition: background 150ms cubic-bezier(0.4, 0, 0.2, 1);
-          will-change: background;
+        &::-webkit-scrollbar {
+          width: var(--sb-size);
+          height: var(--sb-size);
         }
 
-        html body::-webkit-scrollbar-thumb {
-          background: var(--scrollbar-thumb-dark);
+        &::-webkit-scrollbar-track {
+          background: var(--dark);
+          border-radius: 4px;
         }
 
-        @media (any-hover: hover) {
-          html body::-webkit-scrollbar-thumb:hover {
-            background: var(--scrollbar-thumb-hover-dark);
-          }
+        &::-webkit-scrollbar-thumb {
+          background: var(--blue);
+          border-radius: 4px;
         }
       }
 
       @supports not selector(::-webkit-scrollbar) {
-        html,
         body {
-          scrollbar-color: var(--scrollbar) var(--scrollbar-thumb);
-          scrollbar-width: thin;
-          scrollbar-gutter: stable;
+          scrollbar-color: var(--blue) var(--dark);
         }
+      }
 
-        @media (prefers-color-scheme: dark) {
-          html,
-          html body {
-            scrollbar-color: var(--scrollbar-dark) var(--scrollbar-thumb-dark);
-          }
-        }
+      h1,
+      h2,
+      h3 {
+        font-family: 'Kode Mono Variable', monospace;
+        margin-bottom: 28px;
+      }
+
+      h1 {
+        color: var(--blue);
+        font-size: var(--h1-size);
+      }
+
+      h2 {
+        font-size: var(--h2-size);
+      }
+
+      h3 {
+        font-size: var(--h3-size);
+      }
+
+      p {
+        margin-bottom: 28px;
+      }
+
+      @view-transition {
+        navigation: auto;
       }
     </style>
 
@@ -121,24 +131,20 @@ const { title, description, metaRobots } = options
     <meta name="robots" content={metaRobots || 'index, follow'} />
     {description && <meta name="description" content={description} />}
     {description && <link href={Astro.url.href} rel="canonical" />}
-    <meta
-      name="author"
-      content="UXCorpRangel (Felix Icaza) - https://github.com/UXCorpRangel/boilerplate"
-    />
-    <meta name="generator" content={Astro.generator} />
+    <meta name="author" content="Ricardo Cuauro - https://odracir.dev" />
 
     {
       description && (
         <Schema
           item={{
             '@context': 'https://schema.org',
-            '@type': 'Organization',
-            name: 'UXCorpRangel',
+            '@type': 'Person',
+            name: 'Ricardo Cuauro',
             description:
-              'Donde Diseñadores y Desarrolladores se unen para ganar experiencias y conocimientos mientras crean proyectos increíbles.',
+              'Una descripción que debo escribir en algún momento de mi vida.',
             image: 'https://avatars.githubusercontent.com/u/172313798',
             logo: 'https://avatars.githubusercontent.com/u/172313798',
-            url: 'https://uxcorprangel.github.io/',
+            url: 'https://odracir.dev/',
             sameAs: [
               'https://github.com/UXCorpRangel/',
               'https://www.linkedin.com/company/uxcorprangel',
@@ -155,10 +161,10 @@ const { title, description, metaRobots } = options
 
     <slot name="schema" />
 
-    <Favicons />
+    <!-- <Favicons /> -->
 
-    <meta name="color-scheme" content="dark light" />
-    <meta name="theme-color" content="#ee2525" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#010409" />
 
     <slot name="social-media" />
   </head>
