@@ -4,7 +4,7 @@ import RRSS from '@components/ui/Rrss.astro'
 
 <header class="header-wrapper">
   <h1 class="title">[<span class="title-light">odracir</span>]</h1>
-  <h2>Ricardo escrito al revés.</h2>
+  <h2 class="sub-title">Ricardo escrito al revés.</h2>
   <p class="desc">
     Hola 👋🏻 mi nombre es Ricardo Cuauro, <strong>frontend developer</strong> con
     +10 años de experiencia como freelancer trabajando con <strong
@@ -38,6 +38,22 @@ import RRSS from '@components/ui/Rrss.astro'
 
       & strong {
         color: var(--light);
+      }
+    }
+  }
+
+  @media (width <= 768px) {
+    .header-wrapper {
+      & .title {
+        font-size: var(--h1-size-m);
+      }
+
+      & .sub-title {
+        font-size: var(--h2-size-m);
+      }
+
+      & .desc {
+        max-width: 100%;
       }
     }
   }
