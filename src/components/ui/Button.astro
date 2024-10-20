@@ -1,0 +1,94 @@
+---
+import { Icon } from 'astro-icon/components'
+
+type Props = {
+  /** La URL a la que se redirigirá el usuario al hacer clic en el botón. */
+  link: string
+
+  /** El texto que se mostrará en el botón. */
+  label: string
+
+  /** El nombre del ícono que se mostrará en el botón. Si no se proporciona, no se mostrará ningún ícono. */
+  icon?: string
+
+  /** Indica si el enlace se abrirá en una nueva pestaña. Por defecto es `false`. */
+  external?: boolean
+
+  /** Indica si se debe ocultar el texto del botón. Por defecto es `false`. */
+  hideLabel?: boolean
+
+  /** El color del ícono del botón. Por defecto es `var(--light)`. */
+  iconColor?: string
+}
+
+const {
+  link,
+  external = false,
+  label,
+  icon,
+  hideLabel = false,
+  iconColor = 'var(--light)'
+} = Astro.props
+
+const linkButtonProps = external
+  ? { target: '_blank', rel: 'noopener noreferrer' }
+  : {}
+---
+
+<a
+  class="link-button"
+  aria-label={label.toLocaleLowerCase()}
+  href={link}
+  {...linkButtonProps}
+>
+  {icon && <Icon name={icon} size={24} color={iconColor} />}
+  {!hideLabel && <span class="link-label">{label}</span>}
+</a>
+
+<style>
+  .link-button {
+    gap: 0.5rem;
+    padding: 0.5rem;
+    align-items: center;
+    display: inline-flex;
+    justify-content: flex-start;
+
+    text-decoration: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0 0 transparent;
+
+    font-size: 1rem;
+    max-height: 2.5rem;
+    font-weight: 600;
+    color: var(--light);
+    background-color: var(--dark);
+    border: 2px solid var(--light);
+
+    transition:
+      transform 0.3s ease-in-out,
+      box-shadow 0.3s ease-in-out;
+
+    &:focus,
+    &:hover {
+      transform: translateY(-2px) translateX(-4px);
+
+      box-shadow: 4px 2px 0 0 var(--light);
+    }
+
+    &:focus-visible {
+      outline-width: 2px;
+      outline-style: dashed;
+      outline-offset: 0.5rem;
+      outline-color: currentColor;
+    }
+
+    &:active {
+      transform: translateX(4px) translateY(2px);
+      box-shadow: 0 0 0 0 transparent;
+    }
+
+    & .link-label {
+      flex: 1;
+    }
+  }
+</style>
