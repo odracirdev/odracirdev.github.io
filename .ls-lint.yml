@@ -3,6 +3,8 @@ ls:
    .cjs: kebab-case
    .mjs: kebab-case
    .ts: kebab-case
+   .types.ts: kebab-case
+   .data.ts: kebab-case
    .d.ts: kebab-case
    .css: kebab-case
    .json: kebab-case
@@ -43,7 +45,7 @@ ignore:
    - node_modules
    - .prettierrc.mjs
    - .prettierignore
-   - .eslintrc.cjs
+   - eslint.config.js
    - .eslintcache
    - .eslintignore
    - .ls-lint.yml
