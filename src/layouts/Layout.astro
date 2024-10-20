@@ -7,8 +7,8 @@ import 'sanitize.css/assets.css'
 import 'sanitize.css/reduce-motion.css'
 // Supports weights 400-700
 import '@fontsource-variable/nunito'
-// Supports weights 400-700
-import '@fontsource-variable/kode-mono'
+// Supports weights 300-700
+import '@fontsource-variable/comfortaa'
 
 interface Options {
   title: string
@@ -41,18 +41,19 @@ const { title, description, metaRobots } = options
       :root {
         --dark: #010409;
         --light: #e7edf3;
+        --light-opacity: #e7edf3d0;
         --blue: #497ff4;
 
-        --h1-size: 48px;
-        --h2-size: 28px;
-        --h3-size: 32px;
-        --p-size: 16px;
+        --h1-size: 3rem;
+        --h2-size: 1.75rem;
+        --h3-size: 2rem;
+        --p-size: 1.15rem;
 
-        --h1-size-m: 40px;
-        --h2-size-m: 20px;
-        --h3-size-m: 24px;
+        --h1-size-m: 2.5rem;
+        --h2-size-m: 1.25rem;
+        --h3-size-m: 1.5rem;
 
-        --sb-size: 8px;
+        --sb-size: 0.35rem;
       }
 
       * {
@@ -96,8 +97,9 @@ const { title, description, metaRobots } = options
       h1,
       h2,
       h3 {
-        font-family: 'Kode Mono Variable', monospace;
-        margin-bottom: 28px;
+        font-family: 'Comfortaa Variable', system-ui;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
       }
 
       h1 {
@@ -114,7 +116,8 @@ const { title, description, metaRobots } = options
       }
 
       p {
-        margin-bottom: 28px;
+        margin-bottom: 1.5rem;
+        color: var(--light-opacity);
       }
 
       @view-transition {

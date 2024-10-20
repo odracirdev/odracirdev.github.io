@@ -1,0 +1,44 @@
+---
+import RRSS from '@components/ui/RRSS.astro'
+---
+
+<header class="header-wrapper">
+  <h1 class="title">[<span class="title-light">odracir</span>]</h1>
+  <h2>Ricardo escrito al revés.</h2>
+  <p class="desc">
+    Hola 👋🏻 mi nombre es Ricardo Cuauro, <strong>frontend developer</strong> con
+    +10 años de experiencia como freelancer trabajando con <strong
+      >WordPress</strong
+    >.
+  </p>
+  <p class="desc">
+    En los últimos 2 años he estado trabajando en <strong
+      >proyectos vanilla</strong
+    > principalmente y también he aprendido tecnologías como
+    <strong>Astro</strong> y <strong>React</strong> en el camino.
+  </p>
+  <RRSS />
+</header>
+
+<style>
+  .header-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    & .title {
+      letter-spacing: 0.5rem;
+
+      & .title-light {
+        color: var(--light);
+      }
+    }
+
+    & .desc {
+      max-width: 65%;
+
+      & strong {
+        color: var(--light);
+      }
+    }
+  }
+</style>

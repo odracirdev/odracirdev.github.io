@@ -1,8 +1,8 @@
 ---
-import { Icon } from 'astro-icon/components'
 import Layout from '@layouts/Layout.astro'
 import OpenGraph from '@components/OpenGraph.astro'
 import ProjectCard from '@components/ui/ProjectCard.astro'
+import Header from './_index/Header.astro'
 
 const options = {
   title: 'Ricardo Cuauro | odraciRdev',
@@ -19,43 +19,7 @@ const options = {
     slot="social-media"
   />
   <main>
-    <header>
-      <h1>ODRACIRDEV</h1>
-      <h2>COMUNIDAD DE AUTODIDACTAS</h2>
-      <p class="desc">
-        El canal de Twitch odraciRdev nació con la finalidad de hacer una ruta
-        de estudios para aprender lo necesario y convertirnos en desarrolladores
-        frontend con recursos gratuitos y accesibles para todos.
-      </p>
-      <ul class="rrss">
-        <li class="rrss__list">
-          <a href="https://www.twitch.tv/odracirdev" target="_blank"
-            ><Icon name="twitch" /> Twitch</a
-          >
-        </li>
-        <li class="rrss__list">
-          <a
-            href="https://www.youtube.com/@ricardcuauro?sub_confirmation=1"
-            target="_blank"><Icon name="youtube" />YouTube</a
-          >
-        </li>
-        <li class="rrss__list">
-          <a href="https://discord.gg/r6tFDfvYW6" target="_blank"
-            ><Icon name="discord" /> Discord</a
-          >
-        </li>
-        <li class="rrss__list">
-          <a href="https://github.com/odracirdev" target="_blank"
-            ><Icon name="github" /> Github</a
-          >
-        </li>
-        <li class="rrss__list">
-          <a href="https://www.linkedin.com/in/ricardocuauro/" target="_blank"
-            ><Icon name="linkedin" />LinkedIn</a
-          >
-        </li>
-      </ul>
-    </header>
+    <Header />
     <section>
       <h3>PROYECTOS</h3>
       <article class="cards__container">
@@ -71,39 +35,6 @@ const options = {
     width: 690px;
     padding-top: 80px;
     margin: 0 auto;
-
-    & header {
-      display: flex;
-      flex-direction: column;
-
-      & .desc {
-        opacity: 80%;
-        max-width: 65%;
-      }
-
-      & .rrss {
-        list-style: none;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 16px;
-        margin-bottom: 36px;
-
-        & .rrss__list {
-          & a {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            text-decoration: none;
-            color: white;
-            transition: color 0.3s ease-in-out;
-
-            &:hover {
-              color: var(--blue);
-            }
-          }
-        }
-      }
-    }
 
     & .cards__container {
       display: grid;
