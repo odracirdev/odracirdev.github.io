@@ -1,0 +1,27 @@
+---
+import { socials } from '@data/social.data'
+import Button from './Button.astro'
+---
+
+<section class="rrss">
+  {
+    socials.map(({ icon, label, link, color }) => (
+      <Button
+        link={link}
+        external
+        label={label}
+        icon={icon}
+        iconColor={color}
+      />
+    ))
+  }
+</section>
+
+<style>
+  .rrss {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2.15rem;
+  }
+</style>
