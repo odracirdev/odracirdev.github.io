@@ -45,8 +45,8 @@ const { title, description, metaRobots } = options
         --blue: #497ff4;
 
         --h1-size: 3rem;
-        --h2-size: 1.75rem;
-        --h3-size: 2rem;
+        --h2-size: 2rem;
+        --h3-size: 1.5rem;
         --p-size: 1.15rem;
 
         --h1-size-m: 2.5rem;
@@ -103,7 +103,6 @@ const { title, description, metaRobots } = options
       }
 
       h1 {
-        color: var(--blue);
         font-size: var(--h1-size);
       }
 
@@ -172,10 +171,20 @@ const { title, description, metaRobots } = options
     <slot name="social-media" />
   </head>
   <body>
-    <slot />
-
-    <Footer />
+    <div class="container">
+      <slot />
+      <Footer />
+    </div>
 
     <slot name="dynamic-components" />
   </body>
 </html>
+
+<style>
+  .container {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+</style>

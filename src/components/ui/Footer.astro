@@ -1,20 +1,35 @@
 <footer>
-  <p>
-    Hecho con <video
-      width="24"
-      src="/media/heart.webm"
-      preload="metadata"
-      playsinline
-      autoplay
-      muted
-      loop></video> por
-    <a href="https://github.com/UXCorpRangel" target="_blank">UXCorpRangel</a>
-  </p>
+  <p>Aquí nadie es reservado, ni los derechos ni los izquierdos. 🍻</p>
+  <small>
+    Powered by <a
+      href="https://github.com/UXCorpRangel/boilerplate"
+      target="_blank">Boilerplate UX Corp Rangel</a
+    > | Inspired by <a href="https://wojtek.im/" target="_blank"
+      >Wojtek Witkowski</a
+    >
+  </small>
 </footer>
 
 <style>
   footer {
-    padding-inline: 1rem;
     text-align: center;
+    margin: 4rem 0 1rem;
+    color: var(--light-opacity);
+
+    p {
+      font-size: 0.85rem;
+      margin-bottom: 0;
+    }
+
+    & small {
+      font-size: 0.65rem;
+      padding: 0.25rem 0;
+
+      & a {
+        text-decoration: none;
+        color: var(--blue);
+        cursor: pointer;
+      }
+    }
   }
 </style>
