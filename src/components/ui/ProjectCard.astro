@@ -1,38 +1,139 @@
-<div class="card__project">
-  <img src="https://placehold.co/340x200.png" alt="" />
-  <h4><span class="rotatingHeader"></span></h4>
-  <p><span class="rotatingDesc"></span></p>
-</div>
+---
+import { projects } from '@data/projects.data'
+---
+
+{
+  projects.map(({ image, name, desc, link }) => (
+    <a
+      class="card-project"
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <div class="project-img">
+        <img src={image} alt={name} />
+      </div>
+      <div class="project-info">
+        <h3>{name}</h3>
+        <p>{desc}</p>
+      </div>
+    </a>
+  ))
+}
 
 <style>
-  .card__project {
-    border: 1px rgb(from var(--light) r g b / 0.1) solid;
-    border-radius: 8px;
-    padding: 16px;
+  @property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+  }
+  .card-project {
+    --color-1: #629bf8;
+    --color-2: #497ff4;
+    --color-3: #2858e8;
+    --color-4: #2043d5;
+    --color-5: #2038ad;
+    --color-6: #203488;
+
+    --border-colors: var(--color-1), var(--color-3), var(--color-2),
+      var(--color-5), var(--color-4), var(--color-6), var(--color-1);
+
+    --radius: 1rem;
+
+    border: 2px solid var(--light-opacity);
+    border-radius: var(--radius);
+    background-color: var(--dark);
+    position: relative;
+    transition: border-color 0.3s ease-in-out;
+    text-decoration: none;
 
     & > * + * {
       margin-top: 8px;
     }
 
-    & h4 {
-      font-family: 'Kode Mono', monospace;
-      font-size: 18px;
-      color: var(--blue);
-      user-select: none;
+    .project-img {
+      padding: 0.75rem 0.75rem 0;
+      transition: padding 0.3s ease-in-out;
+      & img {
+        width: 100%;
+        aspect-ratio: 16/9;
+        background-color: var(--light);
+        border: inherit;
+        border-radius: 0.5rem;
+        transition: border-radius 0.3s ease-in-out;
+      }
     }
 
-    & p {
-      opacity: 60%;
-      margin-bottom: 0;
-      user-select: none;
+    & .project-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 0 0.75rem 0.75rem;
+      & h3 {
+        color: var(--blue);
+        margin-bottom: 0;
+      }
+
+      & p {
+        margin-bottom: 0;
+      }
     }
 
-    & img {
-      height: 200px;
+    &::before,
+    &::after {
+      content: '';
+
+      z-index: -1;
       width: 100%;
-      background-color: var(--light);
-      border: inherit;
-      border-radius: 8px;
+      height: 100%;
+
+      position: absolute;
+      translate: -50% -50%;
+      inset-block-start: 50%;
+      inset-inline-start: 50%;
+
+      padding: 0.25rem;
+      border-radius: var(--radius);
+      background-image: conic-gradient(from var(--angle), var(--border-colors));
+      animation: spin 3s linear infinite;
+      animation-play-state: paused;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    &::before {
+      filter: blur(1.5rem);
+    }
+
+    &:hover {
+      border-color: transparent;
+
+      & .project-img {
+        padding: 0;
+        & img {
+          border-radius: 1rem 1rem 0 0;
+        }
+      }
+      &::after,
+      &::before {
+        animation-play-state: running;
+      }
+
+      &::before {
+        opacity: 0.5;
+      }
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  @keyframes spin {
+    from {
+      --angle: 0deg;
+    }
+    to {
+      --angle: 360deg;
     }
   }
 </style>

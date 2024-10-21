@@ -1,0 +1,30 @@
+<div class="card-project">
+  <h3><span class="rotatingHeader"></span></h3>
+  <p><span class="rotatingDesc"></span></p>
+</div>
+
+<style>
+  .card-project {
+    border: 2px solid var(--light-opacity);
+    border-radius: 1rem;
+    padding: 16px;
+    height: fit-content;
+
+    & > * + * {
+      margin-top: 8px;
+    }
+
+    & h3 {
+      color: var(--blue);
+      user-select: none;
+      margin-bottom: 0.5rem;
+    }
+
+    & p {
+      opacity: 50%;
+      margin-bottom: 0;
+      user-select: none;
+      font-size: 0.85rem;
+    }
+  }
+</style>
