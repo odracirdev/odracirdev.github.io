@@ -1,0 +1,41 @@
+---
+import ProjectCard from '@components/ui/ProjectCard.astro'
+import VoidProject from '@components/ui/VoidProject.astro'
+---
+
+<section class="projects">
+  <h2 class="projects-title"><span>[</span>Proyectos<span>]</span></h2>
+  <p>
+    A lo largo del tiempo he creado distintos proyectos como freelancer, acá
+    encontrarás una recopilación de mis proyectos más recientes.
+  </p>
+  <article class="cards-container">
+    <ProjectCard />
+    <VoidProject />
+  </article>
+</section>
+
+<style>
+  .projects {
+    & .projects-title {
+      letter-spacing: 0.15rem;
+
+      & span {
+        color: var(--blue);
+      }
+    }
+  }
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  @media (width <=400px) {
+    .cards__container {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script src="@scripts/shuffle-text.js"></script>

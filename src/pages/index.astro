@@ -1,8 +1,8 @@
 ---
 import Layout from '@layouts/Layout.astro'
 import OpenGraph from '@components/OpenGraph.astro'
-import ProjectCard from '@components/ui/ProjectCard.astro'
 import Header from './_index/Header.astro'
+import Projects from './_index/Projects.astro'
 
 const options = {
   title: 'Ricardo Cuauro | odraciRdev',
@@ -20,13 +20,7 @@ const options = {
   />
   <main>
     <Header />
-    <section>
-      <h3>PROYECTOS</h3>
-      <article class="cards__container">
-        <ProjectCard />
-        <ProjectCard />
-      </article>
-    </section>
+    <Projects />
   </main>
 </Layout>
 
@@ -35,43 +29,6 @@ const options = {
     width: 690px;
     padding-top: 80px;
     margin: 0 auto;
-
-    & .cards__container {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 24px;
-
-      & .card__project {
-        border: 1px rgb(from var(--light) r g b / 0.1) solid;
-        border-radius: 8px;
-        padding: 16px;
-
-        & > * + * {
-          margin-top: 8px;
-        }
-
-        & h4 {
-          font-family: 'Kode Mono', monospace;
-          font-size: 18px;
-          color: var(--blue);
-          user-select: none;
-        }
-
-        & p {
-          opacity: 60%;
-          margin-bottom: 0;
-          user-select: none;
-        }
-
-        & img {
-          height: 200px;
-          width: 100%;
-          background-color: var(--light);
-          border: inherit;
-          border-radius: 8px;
-        }
-      }
-    }
   }
 
   @media (width <=400px) {
@@ -85,12 +42,6 @@ const options = {
       max-width: 85%;
       padding: 40px 0;
       margin: 0 auto;
-
-      & .cards__container {
-        grid-template-columns: 1fr;
-      }
     }
   }
 </style>
-
-<script src="@scripts/shuffle-text.js"></script>
