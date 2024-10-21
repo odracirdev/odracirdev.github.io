@@ -22,7 +22,7 @@ const rotatingDesc = document.querySelectorAll('.rotatingDesc')
 
 let indexA = 0
 let indexB = 0
-const velocity = 100 // Time in milliseconds
+const velocity = 120 // Time in milliseconds
 
 function rotateHeader() {
   rotatingHeader.forEach((text) => {
@@ -40,4 +40,4 @@ function rotateDesc() {
   indexB = (indexB + 1) % descChars.length
 }
 
-setInterval(rotateDesc, velocity)
+setInterval(rotateDesc, velocity - 20)
