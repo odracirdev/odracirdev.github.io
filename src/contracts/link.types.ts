@@ -1,15 +1,15 @@
 export interface SocialLink {
-  // Texto del enlace.
+  /** Texto del enlace. */
   label: string
 
-  //  URL del enlace.
+  /** URL del enlace. */
   link: string
 
-  // Color del enlace.
+  /** Color del enlace. */
   color?: string
 }
 
 export type SocialIconLink = SocialLink & {
-  // Icono del enlace.
+  /** Icono del enlace. */
   icon: string
 }
