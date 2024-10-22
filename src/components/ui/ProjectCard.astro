@@ -45,6 +45,7 @@ import { projects } from '@data/projects.data'
     background-color: var(--dark);
     position: relative;
     transition: border-color 0.3s ease-in-out;
+    transition: border 0.3s ease-in-out;
     text-decoration: none;
 
     & > * + * {
@@ -106,12 +107,13 @@ import { projects } from '@data/projects.data'
     }
 
     &:hover {
+      border: 0 solid transparent;
       border-color: transparent;
 
       & .project-img {
         padding: 0;
         & img {
-          border-radius: 1rem 1rem 0 0;
+          border-radius: 0.85rem 0.85rem 0 0;
         }
       }
       &::after,
