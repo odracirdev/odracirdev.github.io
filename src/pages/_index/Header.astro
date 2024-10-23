@@ -3,55 +3,70 @@ import Professional from '@components/ui/Professional.astro'
 ---
 
 <header class="header-wrapper">
-  <h1 class="title">
-    <span class="title-blue">[</span>odracir<span class="title-blue">]</span>
-  </h1>
-  <p class="desc">
-    Hola 👋🏻 mi nombre es Ricardo Cuauro, <strong>frontend developer</strong> con
-    +10 años de experiencia como freelancer trabajando con <strong
-      >WordPress</strong
-    >.
-  </p>
-  <p class="desc">
-    En los últimos 2 años he estado trabajando en <strong
-      >proyectos vanilla</strong
-    > principalmente y también he aprendido tecnologías como
-    <strong>Astro</strong> y <strong>React</strong> en el camino.
-  </p>
-  <Professional />
+  <div class="info-header">
+    <h1 class="title">
+      <span class="title-blue">[</span>odracir<span class="title-blue">]</span>
+    </h1>
+    <p class="desc">
+      Hola 👋🏻 mi nombre es Ricardo Cuauro, <strong>frontend developer</strong> con
+      +10 años de experiencia como freelancer trabajando con <strong
+        >WordPress</strong
+      >.
+    </p>
+    <p class="desc">
+      En los últimos 2 años he estado trabajando en <strong
+        >proyectos vanilla</strong
+      > principalmente y también he aprendido tecnologías como
+      <strong>Astro</strong> y <strong>React</strong> en el camino.
+    </p>
+    <Professional />
+  </div>
+  <img src="/images/avatar/odracir.webp" alt="odraciRdev Avatar" />
 </header>
 
 <style>
   .header-wrapper {
     display: flex;
-    flex-direction: column;
+    position: relative;
 
-    & .title {
-      letter-spacing: 0.5rem;
-      margin-bottom: 0.75rem;
+    & .info-header {
+      display: flex;
+      flex-direction: column;
+      & .title {
+        letter-spacing: 0.5rem;
+        margin-bottom: 0.75rem;
 
-      & .title-blue {
-        color: var(--blue);
+        & .title-blue {
+          color: var(--blue);
+        }
+      }
+
+      & .desc {
+        max-width: 65%;
       }
     }
 
-    & .desc {
-      max-width: 65%;
-
-      & strong {
-        color: var(--light);
-      }
+    & img {
+      height: 420px;
+      position: absolute;
+      inset-inline-end: 50px;
     }
   }
 
   @media (width <= 500px) {
     .header-wrapper {
-      & .title {
-        font-size: var(--h1-size-m);
+      & .info-header {
+        & .title {
+          font-size: var(--h1-size-m);
+        }
+
+        & .desc {
+          max-width: 100%;
+        }
       }
 
-      & .desc {
-        max-width: 100%;
+      & img {
+        display: none;
       }
     }
   }
