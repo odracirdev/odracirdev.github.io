@@ -13,7 +13,6 @@ import '@fontsource-variable/comfortaa'
 interface Options {
   title: string
   description: string
-  metaRobots?: string
 }
 
 interface Props {
@@ -21,7 +20,7 @@ interface Props {
 }
 
 const { options } = Astro.props
-const { title, description, metaRobots } = options
+const { title, description } = options
 ---
 
 <!doctype html>
@@ -130,7 +129,7 @@ const { title, description, metaRobots } = options
 
     <slot name="defer-script" />
 
-    <meta name="robots" content={metaRobots || 'index, follow'} />
+    <meta name="robots" content="/robots.txt" />
     {description && <meta name="description" content={description} />}
     {description && <link href={Astro.url.href} rel="canonical" />}
     <meta name="author" content="Ricardo Cuauro - https://odracir.dev" />
