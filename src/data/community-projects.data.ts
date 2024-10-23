@@ -19,5 +19,12 @@ export const communityProjects = [
     tech: 'techs/astro',
     icon: '/images/communities/uxcorp.webp',
     link: 'https://uxcorprangel.github.io/ana-cards-web/'
+  },
+  {
+    name: 'challengeHTML',
+    community: 'odraciRdev',
+    tech: 'techs/html',
+    icon: '/images/communities/odracirdev.webp',
+    link: 'https://odracirdev.github.io/challengeHTML/'
   }
 ]
