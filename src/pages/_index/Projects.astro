@@ -1,5 +1,4 @@
 ---
-import CommunityProjectCard from '@components/ui/CommunityProjectCard.astro'
 import ProjectCard from '@components/ui/ProjectCard.astro'
 import VoidProject from '@components/ui/VoidProject.astro'
 ---
@@ -12,16 +11,7 @@ import VoidProject from '@components/ui/VoidProject.astro'
   </p>
   <article class="cards-container">
     <ProjectCard />
-    <VoidProject />
-  </article>
-
-  <h2 class="projects-title"><span>[</span>Comunidad<span>]</span></h2>
-  <p>
-    Además de crear proyectos propios y como freelancer, me gusta aportar a
-    proyectos open sources de distintas comunidades.
-  </p>
-  <article class="cards-container">
-    <CommunityProjectCard />
+    <VoidProject placeholder rotatingHeader />
   </article>
 </section>
 
@@ -42,7 +32,7 @@ import VoidProject from '@components/ui/VoidProject.astro'
     margin-bottom: 3rem;
   }
 
-  @media (width <=400px) {
+  @media (width <= 425px) {
     .cards-container {
       grid-template-columns: 1fr;
       margin-bottom: 2rem;

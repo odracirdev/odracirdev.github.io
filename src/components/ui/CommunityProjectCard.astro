@@ -10,6 +10,7 @@ import { communityProjects } from '@data/community-projects.data'
       href={link}
       target="_blank"
       rel="noopener noreferrer"
+      aria-label={name}
     >
       <div class="project-info">
         <h3>{name}</h3>
@@ -47,7 +48,6 @@ import { communityProjects } from '@data/community-projects.data'
     background-color: var(--dark);
     position: relative;
     transition: border-color 0.3s ease-in-out;
-    text-decoration: none;
 
     & > * + * {
       margin-top: 8px;
@@ -57,11 +57,13 @@ import { communityProjects } from '@data/community-projects.data'
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
-      padding: 0.75rem;
+      padding: 1rem;
 
       & h3 {
         color: var(--blue);
         margin-bottom: 0;
+        font-size: 1.25rem;
+        font-weight: 700;
       }
 
       & .project-details {
@@ -80,12 +82,13 @@ import { communityProjects } from '@data/community-projects.data'
         }
       }
 
-      & svg:nth-last-child(1) {
+      & svg {
         z-index: 0;
         position: absolute;
         inset-inline-end: 0;
         inset-block-end: 0;
         opacity: 0.15;
+        transition: opacity 0.3s ease-in-out;
       }
     }
 
@@ -117,6 +120,12 @@ import { communityProjects } from '@data/community-projects.data'
 
     &:hover {
       border-color: transparent;
+
+      & .project-info {
+        & svg {
+          opacity: 0.35;
+        }
+      }
 
       &::after,
       &::before {

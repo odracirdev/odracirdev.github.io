@@ -18,17 +18,5 @@ export const socials: SocialIconLink[] = [
     icon: 'discord',
     link: 'https://discord.gg/r6tFDfvYW6',
     color: '#5865F2'
-  },
-  {
-    label: 'GitHub',
-    icon: 'github',
-    link: 'https://github.com/odracirdev',
-    color: 'var(--light)'
-  },
-  {
-    label: 'LinkedIn',
-    icon: 'linkedin',
-    link: 'https://www.linkedin.com/in/ricardocuauro/',
-    color: '#0A66C2'
   }
 ]

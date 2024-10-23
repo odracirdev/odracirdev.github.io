@@ -1,0 +1,63 @@
+---
+import CommunityProjectCard from '@components/ui/CommunityProjectCard.astro'
+import Rrss from '@components/ui/Rrss.astro'
+import VoidProject from '@components/ui/VoidProject.astro'
+---
+
+<section class="projects">
+  <h2 class="projects-title"><span>[</span>Comunidad<span>]</span></h2>
+  <p>
+    Desde mis inicios he sido muy autodidacta, conozco de primera mano el poder
+    de las comunidades tanto para el aprendizaje como para el crecimiento
+    profesional.
+  </p>
+  <p>
+    Después de muchos años de pertecener a distintas comunidades al rededor del
+    mundo hoy puedo decir que cuento con <a
+      href="https://ds.odracir.dev/"
+      target="_blank"
+      aria-label="discord">mi propia comunidad</a
+    > que, aunque es chiquita, está llena de personas muy dispuestas a aprender y
+    a enseñar.
+  </p>
+  <article class="cards-container">
+    <CommunityProjectCard />
+    <VoidProject />
+  </article>
+  <div class="social">
+    <Rrss />
+  </div>
+</section>
+
+<style>
+  .projects {
+    & .projects-title {
+      letter-spacing: 0.15rem;
+
+      & span {
+        color: var(--blue);
+      }
+    }
+  }
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto;
+    gap: 24px;
+    margin-bottom: 3rem;
+  }
+
+  .social {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (width <= 425px) {
+    .cards-container {
+      grid-template-columns: 1fr;
+      margin-bottom: 2rem;
+    }
+  }
+</style>
+
+<script src="@scripts/shuffle-text.js"></script>

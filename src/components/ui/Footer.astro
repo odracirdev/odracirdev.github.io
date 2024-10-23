@@ -13,8 +13,13 @@
 <style>
   footer {
     text-align: center;
-    margin: 4rem 0 1rem;
+    margin: 1rem 0;
     color: var(--light-opacity);
+
+    @media (width <= 425px) {
+      max-width: 14rem;
+      margin: 0 auto;
+    }
 
     p {
       font-size: 0.85rem;
@@ -26,8 +31,6 @@
       padding: 0.25rem 0;
 
       & a {
-        text-decoration: none;
-        color: var(--blue);
         cursor: pointer;
       }
     }
