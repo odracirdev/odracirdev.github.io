@@ -1,21 +1,23 @@
 ---
-import { projects } from '@data/projects.data'
+import { Icon } from 'astro-icon/components'
+import { communityProjects } from '@data/community-projects.data'
 ---
 
 {
-  projects.map(({ image, name, desc, link }) => (
+  communityProjects.map(({ name, community, tech, icon, link }) => (
     <a
       class="card-project"
       href={link}
       target="_blank"
       rel="noopener noreferrer"
     >
-      <div class="project-img">
-        <img src={image} alt={name} />
-      </div>
       <div class="project-info">
         <h3>{name}</h3>
-        <p>{desc}</p>
+        <div class="project-details">
+          <img src={icon} alt={community} />
+          <p>{community}</p>
+        </div>
+        <Icon name={tech} size={68} />
       </div>
     </a>
   ))
@@ -51,31 +53,39 @@ import { projects } from '@data/projects.data'
       margin-top: 8px;
     }
 
-    .project-img {
-      padding: 0.75rem 0.75rem 0;
-      transition: padding 0.3s ease-in-out;
-      & img {
-        width: 100%;
-        aspect-ratio: 16/9;
-        background-color: var(--light);
-        border: inherit;
-        border-radius: 0.5rem;
-        transition: border-radius 0.3s ease-in-out;
-      }
-    }
-
     & .project-info {
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
-      padding: 0 0.75rem 0.75rem;
+      padding: 0.75rem;
+
       & h3 {
         color: var(--blue);
         margin-bottom: 0;
       }
 
-      & p {
-        margin-bottom: 0;
+      & .project-details {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.5rem;
+
+        & img {
+          max-height: 1.5rem;
+          aspect-ratio: 1;
+        }
+
+        & p {
+          margin-bottom: 0;
+        }
+      }
+
+      & svg:nth-last-child(1) {
+        z-index: 0;
+        position: absolute;
+        inset-inline-end: 0;
+        inset-block-end: 0;
+        opacity: 0.15;
       }
     }
 
@@ -108,12 +118,6 @@ import { projects } from '@data/projects.data'
     &:hover {
       border-color: transparent;
 
-      & .project-img {
-        padding: 0;
-        & img {
-          border-radius: 0.85rem 0.85rem 0 0;
-        }
-      }
       &::after,
       &::before {
         animation-play-state: running;
