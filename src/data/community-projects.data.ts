@@ -22,9 +22,9 @@ export const communityProjects = [
   },
   {
     name: 'challengeHTML',
-    community: 'odraciRdev',
+    community: 'ManzDev',
     tech: 'techs/html',
-    icon: '/images/communities/odracirdev.webp',
+    icon: '/images/communities/manzdev.webp',
     link: 'https://odracirdev.github.io/challengeHTML/'
   }
 ]
