@@ -6,6 +6,52 @@ Este portafolios multipropósito nace de la necesidad de mostrar todos los traba
 
 En la web resultante podrás ver información sobre quién soy, que he estado haciendo y también cómo lo he estado haciendo.
 
+## 🧰 Stack
+
+- 🚀 [Astro](https://astro.build/) - El framework web para sitios web basados en contenidos.
+- 🏷️ [Typescript](https://www.typescriptlang.org/) - JavaScript con sintaxis para tipos.
+
+## 🤔 ¿Cómo usar?
+
+Para implementar esta web con tu propia información debes seguir estos pasos:
+
+1. **Haz un Fork**: En la esquina superior derecha de la página del repositorio, haz clic en el botón **Fork**. Esto creará una copia del repositorio en tu cuenta de GitHub.
+2. **Clona tu Fork**: Abre una terminal en tu máquina local y usa uno de los siguientes comandos para clonar tu fork:
+
+Con HTTPS:
+
+```bash
+git clone https://github.com/TU_USUARIO/odracirdev.github.io.git
+```
+
+Con SSH **(recomendado)**:
+
+```bash
+git clone git@github.com:odracirdev/odracirdev.github.io.git
+```
+
+3. **Ingresa a tu repositorio local**: Después de haber clonado tu fork debes ingresar al directorio que se ha generado automáticamente con el siguiente comando en la terminal:
+
+```bash
+cd odracirdev.github.io
+```
+
+4. **Instala las dependencias**: Una vez dentro de tu repositorio local debes instalar las dependencias necesarias con uno de los siguientes comandos:
+
+Con NPM:
+
+```bash
+npm install
+```
+
+Con PNPM **(recomendado)**:
+
+```bash
+pnpm install
+```
+
+¡Listo! Ya puedes modificar el proyecto a tu gusto.
+
 ## 💙 odraciRdev
 
 Es mi [nickname en twitch](https://twitch.tv/odracirdev) y también un proyecto personal y profesional, ya que en enero de 2024 comencé a streamear una [ruta de estudios para convertirme en frontend developer](https://www.youtube.com/watch?v=KxdlczdR2no&list=PLiZbQ2ISmGRfNbI3SPTjeO846-IjnEYqV&pp=iAQB) y vaya que he aprendido cosas...
