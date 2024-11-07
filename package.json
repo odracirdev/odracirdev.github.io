@@ -65,7 +65,7 @@
     "@commitlint/cli": "19.5.0",
     "@commitlint/config-conventional": "19.5.0",
     "@eslint/js": "9.14.0",
-    "@ianvs/prettier-plugin-sort-imports": "4.3.1",
+    "@ianvs/prettier-plugin-sort-imports": "4.4.0",
     "@ls-lint/ls-lint": "2.2.3",
     "@typescript-eslint/parser": "8.13.0",
     "astro-eslint-parser": "1.0.3",
