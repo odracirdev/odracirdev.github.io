@@ -18,7 +18,7 @@ export const communityProjects = [
     community: 'UX Corp Rangel',
     tech: 'techs/astro',
     icon: '/images/communities/uxcorp.webp',
-    link: 'https://uxcorprangel.github.io/ana-cards-web/'
+    link: 'https://cards.anarangel.com/'
   },
   {
     name: 'challengeHTML',
