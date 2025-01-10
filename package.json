@@ -47,8 +47,8 @@
   "dependencies": {
     "@astrojs/check": "^0.9.4",
     "@astrojs/ts-plugin": "1.10.4",
-    "@fontsource-variable/comfortaa": "5.1.0",
-    "@fontsource-variable/nunito": "5.1.0",
+    "@fontsource-variable/comfortaa": "5.1.1",
+    "@fontsource-variable/nunito": "5.1.1",
     "@playform/compress": "0.1.6",
     "@playform/inline": "0.1.0",
     "astro": "5.1.1",
@@ -66,7 +66,7 @@
     "@eslint/js": "9.17.0",
     "@ianvs/prettier-plugin-sort-imports": "4.4.0",
     "@ls-lint/ls-lint": "2.2.3",
-    "@typescript-eslint/parser": "8.18.2",
+    "@typescript-eslint/parser": "8.19.0",
     "astro-eslint-parser": "1.1.0",
     "eslint": "9.14.0",
     "eslint-config-prettier": "9.1.0",
@@ -74,12 +74,12 @@
     "eslint-plugin-jsx-a11y": "6.10.2",
     "eslint-plugin-n": "16.6.2",
     "eslint-plugin-prettier": "5.2.1",
-    "globals": "15.12.0",
-    "lint-staged": "15.2.10",
+    "globals": "15.14.0",
+    "lint-staged": "15.3.0",
     "prettier": "3.4.2",
     "prettier-plugin-astro": "0.14.1",
     "simple-git-hooks": "2.11.1",
     "typescript": "^5.6.3",
-    "typescript-eslint": "8.18.2"
+    "typescript-eslint": "8.19.0"
   }
 }
