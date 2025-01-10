@@ -1,6 +1,5 @@
 ---
 import CommunityProjectCard from '@components/ui/CommunityProjectCard.astro'
-import Rrss from '@components/ui/Rrss.astro'
 
 // import VoidProject from '@components/ui/VoidProject.astro'
 ---
@@ -26,13 +25,11 @@ import Rrss from '@components/ui/Rrss.astro'
     <CommunityProjectCard />
     <!-- <VoidProject /> -->
   </article>
-  <div class="social">
-    <Rrss />
-  </div>
 </section>
 
 <style>
   .projects {
+    margin-top: 6rem;
     & .projects-title {
       letter-spacing: 0.15rem;
 
@@ -47,11 +44,6 @@ import Rrss from '@components/ui/Rrss.astro'
     grid-template-rows: auto;
     gap: 24px;
     margin-bottom: 3rem;
-  }
-
-  .social {
-    display: flex;
-    justify-content: center;
   }
 
   @media (width <= 750px) {
