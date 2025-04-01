@@ -47,7 +47,7 @@
   "dependencies": {
     "@astrojs/check": "^0.9.4",
     "@astrojs/ts-plugin": "1.10.4",
-    "@fontsource-variable/comfortaa": "5.1.1",
+    "@fontsource-variable/comfortaa": "5.2.5",
     "@fontsource-variable/nunito": "5.1.1",
     "@playform/compress": "0.1.6",
     "@playform/inline": "0.1.0",
