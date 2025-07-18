@@ -1,0 +1,115 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.1.2/schema.json",
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "quoteProperties": "asNeeded",
+      "trailingCommas": "es5",
+      "semicolons": "asNeeded"
+    }
+  },
+  "assist": { "actions": { "source": { "organizeImports": "off" } } },
+  "formatter": {
+    "enabled": true,
+    "formatWithErrors": false,
+    "indentStyle": "tab",
+    "indentWidth": 2,
+    "lineWidth": 100,
+    "includes": [
+      "**",
+      "!**/node_modules/**",
+      "!**/dist/**",
+      "!**/tsconfig.json",
+      "!**/jsconfig.json"
+    ]
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "complexity": {
+        "noForEach": "off",
+        "noBannedTypes": "off",
+        "useOptionalChain": "off",
+        "noStaticOnlyClass": "off",
+        "useSimplifiedLogicExpression": "off",
+        "noUselessStringConcat": "warn",
+        "useDateNow": "error",
+        "noUselessUndefinedInitialization": "error",
+        "noFlatMapIdentity": "error"
+      },
+      "correctness": {
+        "useImportExtensions": "off",
+        "noUndeclaredDependencies": "off",
+        "noUnusedFunctionParameters": "warn",
+        "noInvalidBuiltinInstantiation": "error",
+        "noInvalidDirectionInLinearGradient": "error",
+        "noInvalidPositionAtImportRule": "error",
+        "noUnknownMediaFeatureName": "error",
+        "noUnmatchableAnbSelector": "error",
+        "noUnknownFunction": "error",
+        "noUnknownProperty": "error",
+        "noUnknownUnit": "error",
+        "noInvalidGridAreas": "error",
+        "useValidTypeof": "off",
+        "noUnknownPseudoElement": "error"
+      },
+      "performance": {
+        "noDelete": "warn",
+        "useTopLevelRegex": "error"
+      },
+      "security": {},
+      "style": {
+        "useConst": "off",
+        "noNonNullAssertion": "off",
+        "useExplicitLengthCheck": "off",
+        "noParameterProperties": "warn",
+        "noRestrictedGlobals": "warn",
+        "noShoutyConstants": "warn",
+        "useFragmentSyntax": "warn",
+        "useExponentiationOperator": "warn",
+        "useThrowNewError": "error",
+        "useThrowOnlyError": "error",
+        "noYodaExpression": "error",
+        "useConsistentBuiltinInstantiation": "error",
+        "useArrayLiterals": "error",
+        "useConsistentArrayType": {
+          "level": "warn",
+          "options": { "syntax": "shorthand" }
+        },
+        "noProcessEnv": "error",
+        "useComponentExportOnlyModules": "error"
+      },
+      "suspicious": {
+        "noArrayIndexKey": "off",
+        "noCatchAssign": "off",
+        "noExplicitAny": "off",
+        "noPrototypeBuiltins": "off",
+        "noEmptyBlock": "warn",
+        "noEvolvingTypes": "warn",
+        "noMisplacedAssertion": "warn",
+        "useErrorMessage": "error",
+        "noDuplicateFontNames": "error",
+        "noImportantInKeyframe": "error",
+        "noDuplicateAtImportRules": "error",
+        "noShorthandPropertyOverrides": "error",
+        "useNumberToFixedDigitsArgument": "error",
+        "noDuplicateSelectorsKeyframeBlock": "error"
+      },
+      "a11y": {
+        "useGenericFontNames": "error",
+        "noLabelWithoutControl": "error",
+        "useFocusableInteractive": "error",
+        "useSemanticElements": "error"
+      },
+      "nursery": {}
+    },
+    "includes": [
+      "**",
+      "!**/node_modules/**",
+      "!**/dist/**",
+      "!**/tsconfig.json",
+      "!**/jsconfig.json"
+    ]
+  }
+}
