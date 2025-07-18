@@ -49,7 +49,7 @@
     "@astrojs/ts-plugin": "1.10.4",
     "@fontsource-variable/comfortaa": "5.2.5",
     "@fontsource-variable/nunito": "5.2.6",
-    "@playform/compress": "0.1.9",
+    "@playform/compress": "0.2.0",
     "@playform/inline": "0.1.2",
     "astro": "5.7.13",
     "astro-compressor": "1.0.0",
