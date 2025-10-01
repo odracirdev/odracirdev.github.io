@@ -48,7 +48,7 @@
     "@astrojs/check": "^0.9.4",
     "@astrojs/ts-plugin": "1.10.4",
     "@fontsource-variable/comfortaa": "5.2.6",
-    "@fontsource-variable/nunito": "5.2.6",
+    "@fontsource-variable/nunito": "5.2.7",
     "@playform/compress": "0.2.0",
     "@playform/inline": "0.1.2",
     "astro": "5.12.0",
